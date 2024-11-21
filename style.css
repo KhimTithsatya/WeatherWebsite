@@ -1,0 +1,187 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Main container styling */
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 1.8em;
+    color: #1cc88a;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #555;
+    background-color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.tab.active {
+    background-color: #333;
+    color: #fff;
+    border-bottom: 3px solid #1cc88a;
+}
+
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    text-align: left;
+}
+
+
+#city-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4e73df;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1cc88a;
+}
+
+#today-weather,
+#hourly-forecast,
+#nearby-cities,
+#forecast-summary,
+#detailed-forecast {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+#today-weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#today-weather .weather-icon {
+    font-size: 2em;
+    color: #ffcc00;
+}
+
+#today-weather .temperature {
+    font-size: 2.5em;
+    color: #333;
+}
+
+#today-weather .details {
+    text-align: right;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+#hourly-forecast {
+    text-align: center;
+}
+
+#hourly-forecast .hour {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+}
+
+#nearby-cities {
+    display:flex;
+    justify-content: space-around;
+}
+
+#nearby-cities .city {
+    background-color: #fff;
+    padding: 10px;
+    width: 45%; 
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+}
+
+#nearby-cities .city .temperature {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#nearby-cities .city .weather-icon {
+    font-size: 1.5em;
+    color: #ffcc00;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .tab {
+        font-size: 0.9em;
+    }
+    #nearby-cities {
+        flex-direction: column;
+    }
+    #nearby-cities .city {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+

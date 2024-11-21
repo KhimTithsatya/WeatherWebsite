@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Weather</h1>
+
+        
+        <div class="city-search">
+            <input type="text" id="city-input" placeholder="Enter city name" />
+            <button onclick="fetchWeather()">Search</button>
+        </div>
+
+       
+        <div class="tabs">
+            <button onclick="showTab('today')" class="tab active">Today</button>
+            <button onclick="showTab('forecast')" class="tab">5-day Forecast</button>
+        </div>
+
+        
+        <div id="today" class="tab-content active">
+            
+            <div id="today-weather" class="section">
+                <h2>Current Weather</h2>
+                <div class="weather-info">
+                    <div class="weather-icon">
+                        
+                        <img src="weather-icon.png" alt="Sunny" />
+                    </div>
+                    <div class="temperature">
+                        <span>29°C</span>
+                        <p>Real Feel 30°C</p>
+                    </div>
+                    <div class="details">
+                        <p>Sunrise: 7:04 AM</p>
+                        <p>Sunset: 5:11 PM</p>
+                        <p>Duration: 10:07 hr</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="hourly-forecast" class="section">
+                <h2>Hourly</h2>
+                <div class="hourly-info">
+                    
+                    <div class="hour">
+                        <p>7pm</p>
+                        <img src="sunny-icon.png" alt="Sunny" />
+                        <p>26°C</p>
+                    </div>
+                    <div class="hour">
+                        <p>8pm</p>
+                        <img src="sunny-icon.png" alt="Sunny" />
+                        <p>26°C</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            <div id="nearby-cities" class="section">
+                <h2>Nearby Places</h2>
+                <div class="nearby-cities-info">
+                    
+                    <div class="city">
+                        <p>Baladzary</p>
+                        <img src="sunny-icon.png" alt="Sunny" />
+                        <p>36°C</p>
+                    </div>
+                    <div class="city">
+                        <p>Bailov</p>
+                        <img src="sunny-icon.png" alt="Sunny" />
+                        <p>29°C</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="forecast" class="tab-content">
+            <div id="forecast-summary" class="section">
+                <h2>5-Day Forecast</h2>
+                <div class="day-forecast">
+                    <div class="forecast-item">
+                        <div class="icon-wrapper">
+                            <img src="https://openweathermap.org/img/wn/04d@2x.png" 
+                            alt="">
+                            <span>______&deg;C</span>
+                        </div>
+                        <p>____</p>
+                        <p>____</p>
+                    </div>
+                    <div class="forecast-item">
+                        <div class="icon-wrapper">
+                            <img src="https://openweathermap.org/img/wn/09n@2x.png" 
+                            alt="">
+                            <span>_____&deg;C</span>
+                        </div>
+                        <p>____</p>
+                        <p>____</p>
+                    </div>
+                    <div class="forecast-item">
+                        <div class="icon-wrapper">
+                            <img src="https://openweathermap.org/img/wn/11n@2x.png" 
+                            alt="">
+                            <span>______&deg;C</span>
+                        </div>
+                        <p>____</p>
+                        <p>____</p>
+                    </div>
+                    <div class="forecast-item">
+                        <div class="icon-wrapper">
+                            <img src="https://openweathermap.org/img/wn/02d@2x.png" 
+                            alt="">
+                            <span>______&deg;C</span>
+                        </div>
+                        <p>____</p>
+                        <p>____</p>
+                    </div>
+                    
+                    <div class="forecast-item">
+                        <div class="icon-wrapper">
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" 
+                            alt="">
+                            <span>______&deg;C</span>
+                        </div>
+                        <p>____</p>
+                        <p>____</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
